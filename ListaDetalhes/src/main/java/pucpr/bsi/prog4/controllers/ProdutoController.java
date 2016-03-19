@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import pucpr.bsi.prog4.models.Produto;
 import pucpr.bsi.prog4.models.ProdutoService;
 
 @Controller
