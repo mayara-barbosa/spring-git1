@@ -31,4 +31,12 @@ public class NaMemoriaProdutoRepository implements ProdutoRepository {
 		public List<Produto> obterTodos(){
 			return produtos;
 		}
+		
+		@Override
+		public Produto obterPorId(long id){
+			return produtos.stream()
+							.filter(p -> p.getId()== id)
+							.findFirst()
+							.get();
+		}
 }

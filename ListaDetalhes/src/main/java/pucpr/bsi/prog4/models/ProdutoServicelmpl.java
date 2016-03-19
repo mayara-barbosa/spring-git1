@@ -15,5 +15,8 @@ public class ProdutoServicelmpl implements ProdutoService {
 		// TODO Auto-generated method stub
 		return produtoRepository.obterTodos();
 	}
-
+	@Override
+	public Produto obterPorId(long id){
+		return produtoRepository.obterPorId(id);
+	}
 }
