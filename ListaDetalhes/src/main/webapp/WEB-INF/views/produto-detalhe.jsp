@@ -14,6 +14,7 @@
 <img src="${imagens}"/>
 <p>
 <fmt:formatNumber value="${produto.preco}"
-						type="currency"/> </p>
+						type="currency"/>
+ </p>
 </body>
 </html>
