@@ -21,7 +21,7 @@ public class ProdutoController {
 		return "produtos";
 	}
 	
-	@RequestMapping("/detalhe/id")
+	@RequestMapping("/detalhe/{id}")
 	public String detahe(@PathVariable("id")long id, Model model){
 		Produto produto;
 		produto = produtoService.obterPorId(id);
