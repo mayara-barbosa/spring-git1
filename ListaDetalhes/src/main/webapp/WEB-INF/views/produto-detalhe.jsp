@@ -16,5 +16,14 @@
 <fmt:formatNumber value="${produto.preco}"
 						type="currency"/>
  </p>
+ 
+    <c:url value="../produtos/" var="listarTodos"></c:url>
+	<c:url value="../produtos/?categoriaId= ${ produto.categoria.id }" var="categoria"></c:url>
+	<h5>
+		<a href="${listarTodos}">Listar todos os produtos   </a>
+		| 	
+		<a href="${categoria}">Voltar para a categoria</a>
+	</h5>
+	
 </body>
 </html>

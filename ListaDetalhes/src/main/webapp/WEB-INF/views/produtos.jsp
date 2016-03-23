@@ -11,9 +11,21 @@
 
 	<h1> Lista de Produtos</h1>
 	<ul>
-	<c:forEach items="${produtos}" var="produto">
-		<li> <a href="detalhe/${produto.id}"> ${produto.nome}</a></li>
+	<div class="row">
+	<c:forEach items="${produtos}" var="produto">	
+	<c:url value="/imagens/${produto.id }.jpg" var="imagens"></c:url>
+		  <div class="col-sm-6 col-md-4">
+		    <div class="thumbnail">
+		      <div class="caption">
+		        <h3>${produto.nome}</h3>
+		        <p><a href="detalhe/${produto.id}" class="btn btn-primary" role="button">Saiba mais</a></p>
+		      </div>
+		    </div>
+		  </div>
+		
 	</c:forEach>
+   </div>
+	
 	</ul>
 
 </body>
