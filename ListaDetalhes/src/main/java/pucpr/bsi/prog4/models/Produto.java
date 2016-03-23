@@ -2,6 +2,14 @@ package pucpr.bsi.prog4.models;
 
 public class Produto {
 	private long id;
+	private Categoria categoria;
+	
+	public Categoria getCategoria() {
+		return categoria;
+	}
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
 	public long getId() {
 		return id;
 	}

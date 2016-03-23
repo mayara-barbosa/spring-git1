@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import pucpr.bsi.prog4.models.Produto;
 import pucpr.bsi.prog4.models.ProdutoService;
@@ -16,8 +17,14 @@ public class ProdutoController {
 	private ProdutoService produtoService;
 	
 	@RequestMapping("/produtos")
-	public String todos(Model model){
+	public String todos(@RequestParam(value="categoriaId", required = false) Long id, Model model){
+		
+		if(id == null){
 			model.addAttribute("produtos",produtoService.obterTodos());
+		}
+		else{
+			model.addAttribute("produtos", produtoService.obterPorCategoria(id));
+		}
 		return "produtos";
 	}
 	
