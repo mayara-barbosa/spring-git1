@@ -34,6 +34,8 @@ public class NaMemoriaProdutoRepository implements ProdutoRepository {
 			produtos.get(2).setCategoria(new Categoria());
 			produtos.get(2).getCategoria().setId(2);
 			produtos.get(2).getCategoria().setNome("Livros");
+			
+			produtos.get(3).getCategoria().setNome("Diversos");
 		}
 		
 		@Override
@@ -65,7 +67,7 @@ public class NaMemoriaProdutoRepository implements ProdutoRepository {
 							.collect(Collectors.toList());
 //			for(Produto p: produtos){
 //				if(p.getCategoria().getId() == id){
-//					return ;
+//					return null ;
 //				}
 //			}
 //			return null;
