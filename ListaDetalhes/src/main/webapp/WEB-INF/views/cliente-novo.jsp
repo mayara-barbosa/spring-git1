@@ -1,6 +1,6 @@
 <%@ taglib prefix="form"
 			uri="http://www.springframework.org/tags/form" %>
-<%@ page language="java" contentType="text/html"; pageEncoding="ISO-8859-1" %>
+<%@ page language="java" contentType="text/html" pageEncoding="ISO-8859-1" %>
 
 <!DOCTYPE>
 <html>

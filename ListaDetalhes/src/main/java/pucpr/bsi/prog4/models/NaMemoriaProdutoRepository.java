@@ -35,7 +35,7 @@ public class NaMemoriaProdutoRepository implements ProdutoRepository {
 			produtos.get(2).getCategoria().setId(2);
 			produtos.get(2).getCategoria().setNome("Livros");
 			
-			produtos.get(3).getCategoria().setNome("Diversos");
+			produtos.get(2).getCategoria().setNome("Diversos");
 		}
 		
 		@Override

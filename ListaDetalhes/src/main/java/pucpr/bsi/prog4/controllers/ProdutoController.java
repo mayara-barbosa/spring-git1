@@ -12,29 +12,31 @@ import pucpr.bsi.prog4.models.ProdutoService;
 
 @Controller
 public class ProdutoController {
-	
+
 	@Autowired
 	private ProdutoService produtoService;
 	
 	@RequestMapping("/produtos")
-	public String todos(@RequestParam(value="categoriaId", required = false) Long id, Model model){
+	public String todos(@RequestParam(value ="categoriaId", required = false) Long id, Model model){
 		
-		if(id == null){
-			model.addAttribute("produtos",produtoService.obterTodos());
-		}
-		else{
-			model.addAttribute("produtos", produtoService.obterPorCategoria(id));
-		}
-		return "produtos";
+		if(id == null)
+			model.addAttribute("produtos", produtoService.obterTodos());
+		else
+			model.addAttribute("produtos",produtoService.obterPorCategoria(id));
+		
+		return "produtos";	
+		
 	}
 	
 	@RequestMapping("/detalhe/{id}")
-	public String detahe(@PathVariable("id")long id, Model model){
+	public String detalhe(@PathVariable("id") long id,
+							Model model){
 		Produto produto;
 		produto = produtoService.obterPorId(id);
-		model.addAttribute("produto",produto);
-		
+		model.addAttribute("produto", produto);
 		return "produto-detalhe";
 	}
-
+	
 }
+
+
