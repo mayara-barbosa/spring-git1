@@ -15,20 +15,20 @@ public class ClienteController {
 	@Autowired
 	private ClienteService clienteService;
 	
-//	@RequestMapping(value="/clientes/novo",
-//					method = RequestMethod.GET)
-//	public String novo(Model model){
-//		model.addAttribute(" clientemv", new ClienteModelView());
-//		
-//		return "cliente-novo";
-//	}
+	@RequestMapping(value="/clientes/novo",
+					method = RequestMethod.GET)
+	public String novo(Model model){
+		model.addAttribute(" clientemv", new ClienteModelView());
+		
+		return "cliente-novo";
+	}
 	
 	@RequestMapping(value="/clientes/novo",
 			method = RequestMethod.POST)
 	public String cadastrar(ClienteModelView clientemv, BindingResult bindingResult){
 		clienteService.cadastrar(clientemv.getCliente());
 
-		return "redirect: /clientes/novo-sucesso";
+		return "redirect:/clientes/novo-sucesso";
 	}
 	
 	@RequestMapping("/clientes/novo-sucesso")
