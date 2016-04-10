@@ -5,11 +5,12 @@ import java.util.Date;
 public class Cliente {
 	private Long id;
 	private String nome;
-	private String cpf;
+	private Long cpf;
 	private Date dataNascimento;
 	private String sexo;
 	private String senha;
 	private boolean receberOfertaPorEmail;
+	
 	
 	
 	public Long getId() {
@@ -24,10 +25,10 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getCpf() {
+	public Long getCpf() {
 		return cpf;
 	}
-	public void setCpf(String cpf) {
+	public void setCpf(Long cpf) {
 		this.cpf = cpf;
 	}
 	public Date getDataNascimento() {
@@ -48,7 +49,7 @@ public class Cliente {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
-	public boolean isReceberOfertaPorEmail() {
+	public boolean getReceberOfertaPorEmail() {
 		return receberOfertaPorEmail;
 	}
 	public void setReceberOfertaPorEmail(boolean receberOfertaPorEmail) {
