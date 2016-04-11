@@ -22,6 +22,7 @@ public class Cliente {
 	@Digits(integer=11, fraction=0, message="O CPF deve conter apenas numeros")
 	private Long cpf;
 	
+	@NotNull(message="Data de nascimento deve ser preenchida")
 	@DateTimeFormat(iso=ISO.DATE)
 	private Date dataNascimento;
 	

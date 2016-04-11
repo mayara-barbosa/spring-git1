@@ -9,9 +9,9 @@ import pucpr.bsi.prog4.models.Cliente;
 public class ClienteModelViewValidator implements Validator {
 
 	@Override
-	public boolean supports(Class<?> cls) {
-		// TODO Auto-generated method stub
-		return ClienteModelView.class.isAssignableFrom(cls);
+	public boolean supports(Class<?> clzz) {
+		
+		return ClienteModelView.class.isAssignableFrom(clzz);
 	}
 
 	@Override

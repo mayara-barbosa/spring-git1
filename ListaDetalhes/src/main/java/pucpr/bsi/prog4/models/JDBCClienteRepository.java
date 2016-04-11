@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 
-@Primary
 @Repository
 public class JDBCClienteRepository implements ClienteRepository {
 	

@@ -41,7 +41,7 @@
 
 	<div>
 		<form:label path="cliente.dataNascimento">Data de Nascimento: </form:label>
-		<form:input path="cliente.dataNascimento"  />
+		<form:input path="cliente.dataNascimento" type="date" />
 		<form:errors path="cliente.dataNascimento"></form:errors>
 	</div>
 

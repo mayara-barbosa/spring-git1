@@ -7,7 +7,6 @@ import javax.management.RuntimeErrorException;
 import org.springframework.stereotype.Component;
 
 import com.mysql.jdbc.Connection;
-import com.mysql.jdbc.Driver;
 
 @Component
 public class ConexaoBD {
