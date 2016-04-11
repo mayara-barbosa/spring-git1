@@ -10,10 +10,6 @@ public class ClienteModelView {
 		return confirmacaoSenha;
 	}
 	
-	public void setConfirmacaoSenha(){
-		this.confirmacaoSenha = confirmacaoSenha;
-	}
-
 	public Cliente getCliente() {
 		return cliente;
 	}
