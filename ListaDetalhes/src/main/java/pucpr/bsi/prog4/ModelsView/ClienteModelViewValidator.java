@@ -24,7 +24,7 @@ public class ClienteModelViewValidator implements Validator {
 		cliente= clienteModelView.getCliente();
 		
 		if(! clienteModelView.getConfirmacaoSenha().equals(cliente.getSenha())){
-			ValidationUtils.rejectIfEmpty(errors, "confirmacaoSenha", "","A senha e a confirmação nao conferem");
+			errors.rejectValue( "confirmacaoSenha", "","A senha e a confirmação nao conferem");
 		}
 		
 		

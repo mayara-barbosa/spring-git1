@@ -1,8 +1,12 @@
 package pucpr.bsi.prog4.ModelsView;
 
+import javax.validation.Valid;
+
 import pucpr.bsi.prog4.models.Cliente;
 
 public class ClienteModelView {
+	
+	@Valid
 	private Cliente cliente;
 	private String confirmacaoSenha;
 	
