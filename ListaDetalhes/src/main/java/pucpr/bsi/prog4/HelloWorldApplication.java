@@ -25,8 +25,7 @@ public class HelloWorldApplication {
 	}
 	
 	@Bean
-	public LocalContainerEntityManagerFactoryBean
-		   siteEntityManagerFactoryBean(EntityManagerFactoryBuilder
+	public LocalContainerEntityManagerFactoryBean   siteEntityManagerFactoryBean(EntityManagerFactoryBuilder
 				   						builder){
 		return builder.dataSource(siteDataSourceBean())
 					  .packages("pucpr.bsi.prog4.models")
