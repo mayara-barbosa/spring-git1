@@ -3,6 +3,8 @@ package pucpr.bsi.prog4.models;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -14,6 +16,8 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 
 @Entity
 public class Cliente {
+	
+	@Id @GeneratedValue
 	private Long id;
 	
 	@Size(min=5, message="Nome deve conter no minimo 5 caracteres")

@@ -16,6 +16,10 @@
 <fmt:formatNumber value="${produto.preco}"
 						type="currency"/>
  </p>
+ <form action="../carrinho-compra" method="post">
+ 	<input type="submit" value="Comprar">
+ 	<input type="hidden" name="produtoId" value="${produto.id}"/>
+ </form>
  
     <c:url value="../produtos/" var="listarTodos"></c:url>
 	<c:url value="../produtos/?categoriaId= ${ produto.categoria.id }" var="categoria"></c:url>

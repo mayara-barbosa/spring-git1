@@ -11,7 +11,7 @@ import com.mysql.jdbc.Connection;
 @Component
 public class ConexaoBD {
 	
-	private final static  String CONNECTION_STRING = "jdbc:mysql://localhost/lojajdbc?user=root&password=root";
+	private final static  String CONNECTION_STRING = "jdbc:mysql://localhost/lojajpa?user=root&password=root";
 	
 	static{
 		try{

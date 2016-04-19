@@ -1,5 +1,6 @@
 package pucpr.bsi.prog4.models;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -15,7 +16,7 @@ public class NaMemoriaProdutoRepository implements ProdutoRepository {
 			produtos.add(new Produto());
 			produtos.get(0).setId(1L);
 			produtos.get(0).setNome("Tablet Samsung");
-			produtos.get(0).setPreco(899.00);
+			produtos.get(0).setPreco(new BigDecimal(899.00));
 			produtos.get(0).setCategoria(new Categoria());
 			produtos.get(0).getCategoria().setId(1);
 			produtos.get(0).getCategoria().setNome("Eletronicos");
@@ -24,13 +25,13 @@ public class NaMemoriaProdutoRepository implements ProdutoRepository {
 			produtos.add(new Produto());
 			produtos.get(1).setId(2L);
 			produtos.get(1).setNome("Celular Iphone");
-			produtos.get(1).setPreco(4_500.00);
+			produtos.get(1).setPreco(new BigDecimal(4_500.00));
 			produtos.get(1).setCategoria(produtos.get(0).getCategoria());
 			
 			produtos.add(new Produto());
 			produtos.get(2).setId(3L);
 			produtos.get(2).setNome("Livro Java");
-			produtos.get(2).setPreco(400.00);
+			produtos.get(2).setPreco(new BigDecimal(400.00));
 			produtos.get(2).setCategoria(new Categoria());
 			produtos.get(2).getCategoria().setId(2);
 			produtos.get(2).getCategoria().setNome("Livros");

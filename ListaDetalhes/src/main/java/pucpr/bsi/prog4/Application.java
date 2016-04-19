@@ -1,5 +1,7 @@
 package pucpr.bsi.prog4;
 
+
+
 import javax.sql.DataSource;
 
 import org.springframework.boot.SpringApplication;
@@ -11,10 +13,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
 @SpringBootApplication
-public class HelloWorldApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HelloWorldApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 	
 	@Bean
@@ -25,8 +27,9 @@ public class HelloWorldApplication {
 	}
 	
 	@Bean
-	public LocalContainerEntityManagerFactoryBean   siteEntityManagerFactoryBean(EntityManagerFactoryBuilder
-				   						builder){
+	public LocalContainerEntityManagerFactoryBean siteEntityManagerFactoryBean
+												(EntityManagerFactoryBuilder
+														builder){
 		return builder.dataSource(siteDataSourceBean())
 					  .packages("pucpr.bsi.prog4.models")
 					  .persistenceUnit("lojaPU")

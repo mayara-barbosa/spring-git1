@@ -1,8 +1,12 @@
 package pucpr.bsi.prog4.models;
 
+import java.math.BigDecimal;
+
 public class Produto {
 	private long id;
 	private Categoria categoria;
+	private String nome;
+	private BigDecimal preco;
 	
 	public Categoria getCategoria() {
 		return categoria;
@@ -22,13 +26,12 @@ public class Produto {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public Number getPreco() {
+	public BigDecimal getPreco() {
 		return preco;
 	}
-	public void setPreco(Number preco) {
+	public void setPreco(BigDecimal preco) {
 		this.preco = preco;
 	}
-	private String nome;
-	private Number preco;
+	
 
 }

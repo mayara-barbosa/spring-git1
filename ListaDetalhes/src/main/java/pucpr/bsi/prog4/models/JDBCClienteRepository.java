@@ -2,7 +2,6 @@ package pucpr.bsi.prog4.models;
 import java.sql.SQLException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import com.mysql.jdbc.Connection;
