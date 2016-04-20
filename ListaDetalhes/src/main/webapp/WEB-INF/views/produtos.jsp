@@ -10,6 +10,15 @@
 <body> 
 
 	<h1> Lista de Produtos</h1>
+	
+	<c:choose>
+		<c:when test="${empty cookie['nome']}">
+			<p><a href="usuario">Informe seu nome</a></p>
+		</c:when>
+		<c:otherwise>
+			<p>Seja bem vindo(a) ${cookie['nome'].value}</p>
+		</c:otherwise>
+	</c:choose>
 	<ul>
 	<div class="row">
 	<c:forEach items="${produtos}" var="produto">	

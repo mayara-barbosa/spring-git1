@@ -12,6 +12,16 @@
 <body>
 
 	<h1>Seu carrinho de compras</h1>
+	<c:choose>
+		<c:when test="${empty cookie['nome']}">
+			<p><a href="usuario">Informe seu nome</a></p>
+		</c:when>
+		<c:otherwise>
+			<p>Seja bem vindo(a) ${cookie['nome'].value}</p>
+			<p>Se você não é o(a)${cookie['nome'].value} <a href="usuario"> Clique aqui</a></p>
+						
+		</c:otherwise>
+	</c:choose>
 
 	<table>
 		<thead>
